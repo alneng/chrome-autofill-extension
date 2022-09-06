@@ -1,0 +1,49 @@
+{
+    "name": "Shopify Autofill",
+    "description": "Autofill and autocheckout extension for all Shopify Websites",
+    "version": "0.9",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*/checkouts/*"
+            ],
+            "js": [
+                "inject/shopify.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://*.shopifycs.com/*"
+            ],
+            "js": [
+                "inject/shopify-card.js"
+            ],
+            "all_frames": true
+        }
+    ],
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "icons": {
+        "16": "/images/letter.png",
+        "32": "/images/letter.png",
+        "48": "/images/letter.png",
+        "128": "/images/letter.png"
+    },
+    "options_page": "options/options.html"
+}
