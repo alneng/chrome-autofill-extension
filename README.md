@@ -5,7 +5,7 @@
 Works on all Shopify sites
 
 ## Installation
-[extension/](https://github.com/wildrxge/chrome-autofill-extension/extension/) - Drag and drop into your chrome://extensions (toggle developer mode on)
+[extension/](https://github.com/wildrxge/chrome-autofill-extension/tree/master/extension) - Drag and drop into your chrome://extensions (toggle developer mode on)
 
 ## How to Use
 Fill in information through the extension and toggle modes in the settings
