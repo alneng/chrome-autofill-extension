@@ -69,7 +69,7 @@ chrome.runtime.onInstalled.addListener(() => {
                 if (typeof (userSettings[field]) != "boolean")
                     chrome.storage.sync.set(JSON.parse(`{ "${field}": "${userSettings[field]}" }`));
                 else
-                    chrome.storage.sync.set(JSON.parse(`{ "${field}": "" }`));
+                    chrome.storage.sync.set(JSON.parse(`{ "${field}": false }`));
             }
         })
     })
